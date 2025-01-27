@@ -3,6 +3,11 @@ from django.http import HttpResponse
 from django.template import loader
 
 # Create your views here.
+
+def index(request):
+    template = loader.get_template('index.html')
+    return HttpResponse(template)
+
 def profe(request):
     professor = {"name":"Roger", "surname1":"Sobrino", "surname2":"Gil", "correu":"roger.sobrino@iticbcn.cat", "curs":"DAW2A", "tutor":True, "moduls": "M7"}
     template = loader.get_template('profesor.html')

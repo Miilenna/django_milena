@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Students</title>
-</head>
-<body>
-    <h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>
-    <table border="1" style="width: 100%; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th>NOM</th>
-            <th>COGNOM 1</th>
-            <th>COGNOM 2</th>
-            <th>CORREU</th>
-            <th>CURS</th>
-            <th>MODULS</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{ nombre }}</td>
-            <td>{{ surname1 }}</td>
-            <td>{{ surname2 }}</td>
-            <td>{{ correu }}</td>
-            <td>{{ curs }}</td>
-            <td>{{ moduls }}</td>
-        </tr>
-    </tbody>
-    </table>
-</body>
-</html>
+{% include "head/header.html" %}
+<h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+<thead>
+    <tr>
+        <th>NOM</th>
+        <th>COGNOM 1</th>
+        <th>COGNOM 2</th>
+        <th>CORREU</th>
+        <th>CURS</th>
+        <th>MODULS</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>{{ nombre }}</td>
+        <td>{{ surname1 }}</td>
+        <td>{{ surname2 }}</td>
+        <td>{{ correu }}</td>
+        <td>{{ curs }}</td>
+        <td>{{ moduls }}</td>
+    </tr>
+</tbody>
+</table>
