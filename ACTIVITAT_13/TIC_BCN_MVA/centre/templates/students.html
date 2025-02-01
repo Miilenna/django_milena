@@ -1,4 +1,5 @@
 {% include "head/header.html" %}
+{% block content %}
 <h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>
 <table border="1" style="width: 100%; border-collapse: collapse;">
 <thead>
@@ -12,13 +13,16 @@
     </tr>
 </thead>
 <tbody>
+    {% for titulo,datos in alumn.items %}
     <tr>
-        <td>{{ nombre }}</td>
-        <td>{{ surname1 }}</td>
-        <td>{{ surname2 }}</td>
-        <td>{{ correu }}</td>
-        <td>{{ curs }}</td>
-        <td>{{ moduls }}</td>
+        <td>{{ datos.name }}</td>
+        <td>{{ datos.surname1 }}</td>
+        <td>{{ datos.surname2 }}</td>
+        <td>{{ datos.correu }}</td>
+        <td>{{ datos.curs }}</td>
+        <td>{{ datos.moduls }}</td>
     </tr>
+    {% endfor %}
 </tbody>
 </table>
+{% endblock %}
