@@ -8,8 +8,9 @@
 </head>
 <body>
 <nav>
-    <a href="../students">Estudiantes</a>
-    <a href="../teachers">Profesores</a>
+    <a href="{% url 'index' %}">Página principal</a>
+    <a href="{% url 'alumn' %}">Estudiantes</a>
+    <a href="{% url 'profe' %}">Profesores</a>
 </nav>
 </body>
 </html>

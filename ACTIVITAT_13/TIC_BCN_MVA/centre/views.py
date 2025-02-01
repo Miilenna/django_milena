@@ -4,9 +4,8 @@ from django.template import loader
 
 # Create your views here.
 
- # def index(request):
-   # template = loader.get_template('index.html')
-    # return HttpResponse(template)
+def index(request):
+    return render(request, 'index.html')
 
 def profe(request):
     professor = {
@@ -128,3 +127,10 @@ def alumn(request):
     }
     context = {"alumn":alumnat}
     return render(request, 'students.html', context)
+
+def alumn_profe(request, pk):
+    alumn_profe_Obj = None
+    for i in professor:
+        if i['id'] == pk:
+            alumn_profe_Obj = i
+    return render(request, {'profes':alumn_profe_Obj})
