@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% include "head/header.html" %}
+
+{% block content %}
+<h1>Es mostra información de los profesores</h1>
+<ul>
+    {% for profe_datos in index_profe %}
+     ID: {{profe_datos.id}}
+    <br>
+    Nombre: {{profe_datos.name}}
+    <br>
+    Rol: {{profe_datos.rol}}
+    <a href="{% url 'profe_datos' profe_datos.id %}">+INFO</a>
+    <br>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock %}
