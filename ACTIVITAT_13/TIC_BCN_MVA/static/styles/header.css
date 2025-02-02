@@ -1,0 +1,14 @@
+* {
+box-sizing: border-box;
+}
+
+nav {
+    background-color: #e3f2fd;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+
+}
+a{
+    padding: 10px;
+}

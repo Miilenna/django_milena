@@ -1,0 +1,33 @@
+{% include "head/header.html" %}
+{% block content %}
+<h1>INFORMACIÓ PROFESSORAT TIC BARCELONA</h1>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+<thead>
+    <tr>
+        <th>NOM</th>
+        <th>COGNOM 1</th>
+        <th>COGNOM 2</th>
+        <th>CORREU</th>
+        <th>CURS</th>
+        <th>TUTOR</th>
+        <th>MODULS</th>
+    </tr>
+</thead>
+<tbody>
+    {% for titulo,datos in profes.items %}
+    <tr>
+        <td>{{ datos.name }}</td>
+        <td>{{ datos.surname1 }}</td>
+        <td>{{ datos.surname2 }}</td>
+        <td>{{ datos.correu }}</td>
+        <td>{{ datos.curs }}</td>
+        <td>{{ datos.tutor }}</td>
+        <td>{{ datos.moduls }}</td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock %}
+
+</body>
+</html>
