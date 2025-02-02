@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% include "head/header.html" %}
+{% block content %}
+<h1>Es mostra informació dels profesors</h1>
+
+<table border="1" style="width: 100%; border-collapse: collapse;">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>COGNOM 1</th>
+        <th>COGNOM 2</th>
+        <th>CORREU</th>
+        <th>CURS</th>
+        <th>TUTOR</th>
+        <th>MODULS</th>
+    </tr>
+</thead>
+  <tbody>
+    <tr>
+        <td>{{index_profe.id}}</td>
+        <td>{{ index_profe.name }}</td>
+        <td>{{ index_profe.surname1 }}</td>
+        <td>{{ index_profe.surname2 }}</td>
+        <td>{{ index_profe.correu }}</td>
+        <td>{{ index_profe.curs }}</td>
+        <td>{{ index_profe.tutor }}</td>
+        <td>{{ index_profe.moduls }}</td>
+    </tr>
+</tbody>
+</table>
+    <br>
+    <a href="{% url 'index_profe' %}">Go back</a>
+{% endblock %}
+
+

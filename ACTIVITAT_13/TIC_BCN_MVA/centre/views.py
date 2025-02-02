@@ -5,7 +5,7 @@ from django.template import loader
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'profes':profesores})
 
 def profe(request):
     professor = {
@@ -24,7 +24,7 @@ def profe(request):
             "surname2": "Fabra",
             "correu": "joseporiol.roca@iticbcn.cat",
             "curs": ["DAW2B", "DAW2A", "DAW1A"],
-            "tutor":True,
+            "tutor":False,
             "moduls": "M8"
         },
         'profe3': {
@@ -128,10 +128,54 @@ def alumn(request):
     context = {"alumn":alumnat}
     return render(request, 'students.html', context)
 
-def alumn_profe(request, pk):
-    alumn_profe_Obj = None
-    for i in professor:
+profesores = [
+        {
+            "id":"1",
+            "name":"Roger",
+            "surname1":"Sobrino",
+            "surname2":"Gil",
+            "correu":"roger.sobrino@iticbcn.cat",
+            "curs":["DAW2A", "DAM2B"],
+            "tutor":True,
+            "moduls": "M7",
+            "rol":"Tutor"
+        },
+        {
+            "id":"2",
+            "name":"Josep Oriol",
+            "surname1": "Roca",
+            "surname2": "Fabra",
+            "correu": "joseporiol.roca@iticbcn.cat",
+            "curs": ["DAW2B", "DAW2A", "DAW1A"],
+            "tutor":True,
+            "moduls": "M8",
+            "rol": "Professor"
+        },
+        {
+            "id":"3",
+            "name": "Juan Manuel",
+            "surname1": "Sánchez",
+            "surname2": "Bel",
+            "correu": "juanmanuel.sanchez@iticbcn.cat",
+            "curs": ["DAW2B", "DAW2A"],
+            "tutor": True,
+            "moduls": "M6",
+            "rol": "Tutor"
+        }
+
+    ]
+def profe_datos(request, pk):
+    profe_Obj = None
+    for i in profesores:
         if i['id'] == pk:
+
+            profe_Obj = i
+    return render(request, 'profe_datos.html', {'index_profe':profe_Obj})
+
+
+def index_profe(request):
+    return render(request, 'index_profe.html', {'index_profe':profesores})
+
             alumn_profe_Obj = i
     return render(request, {'profes':alumn_profe_Obj})
 
@@ -139,3 +183,4 @@ def alumn_profe(request, pk):
 # Create your views here.
 def index (request):
     return HttpResponse("Hello")
+
