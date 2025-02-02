@@ -128,10 +128,6 @@ def alumn(request):
     context = {"alumn":alumnat}
     return render(request, 'students.html', context)
 
-
-
-
-
 profesores = [
         {
             "id":"1",
