@@ -134,3 +134,8 @@ def alumn_profe(request, pk):
         if i['id'] == pk:
             alumn_profe_Obj = i
     return render(request, {'profes':alumn_profe_Obj})
+
+
+# Create your views here.
+def index (request):
+    return HttpResponse("Hello")
