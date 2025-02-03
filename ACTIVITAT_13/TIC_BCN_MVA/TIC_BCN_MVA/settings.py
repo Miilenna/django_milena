@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'centre',
+    'pasApas',
 ]
 
 MIDDLEWARE = [
@@ -83,9 +84,9 @@ WSGI_APPLICATION = 'TIC_BCN_MVA.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "",
-        "USER": "",
-        "PASSWORD": "",
+        "NAME": "ITIC_DB",
+        "USER": "ITIC_user",
+        "PASSWORD": "ITIC",
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }
