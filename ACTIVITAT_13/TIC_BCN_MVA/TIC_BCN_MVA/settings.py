@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'centre',
     'pasApas',
+    'centre.apps.CentreConfig',
 ]
 
 MIDDLEWARE = [
