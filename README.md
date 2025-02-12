@@ -26,6 +26,12 @@ https://youtu.be/fsFmCkgOEWs
 ![path.png](ACTIVITAT_13/recursos/act14/path.png)
 
 ### Creación de la aplicación:
+El comando para crear la app:
 ![comando_crear_app.png](ACTIVITAT_13/recursos/act14/comando_crear_app.png)
 ![urls_trucada_metodes.png](ACTIVITAT_13/recursos/act14/urls_trucada_metodes.png)
 ![metodos_correctos.png](ACTIVITAT_13/recursos/act14/metodos_correctos.png)
+
+### Modelo usuario:
+![makemigration.png](ACTIVITAT_13/recursos/act14/makemigration.png)
+![migrate.png](ACTIVITAT_13/recursos/act14/migrate.png)
+![tabla_login.png](ACTIVITAT_13/recursos/act14/tabla_login.png)
