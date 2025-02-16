@@ -1,4 +1,7 @@
 <body>
     {% include "head/header.html" %}
     <h1>Página inicial</h1>
+
+    <h1>Benvingut {{usuario}}!</h1>
+    <a href="{% url 'logout' %}" class="top-menu">Logout</a>
 </body>

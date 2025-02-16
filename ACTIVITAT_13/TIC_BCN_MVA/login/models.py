@@ -6,5 +6,5 @@ class Person(models.Model):
     email = models.CharField(unique=True)
     nom = models.CharField(max_length=100)
     cognom = models.CharField(max_length=100)
-    cognom2 = models.CharField(max_length=100)
+    contrasenya = models.CharField(max_length=100)
 

@@ -1,10 +1,12 @@
 <h1>Formulari Login</h1>
 
-<form action="", method="POST">
+<form action="" method="POST">
+    {% block content %}
+
     {% csrf_token %}
 
+    {{ form.as_p}}
     <input type="submit">
 
+    {% endblock %}
 </form>
-
-{% endblock %}

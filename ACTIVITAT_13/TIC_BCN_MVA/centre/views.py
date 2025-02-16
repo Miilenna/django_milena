@@ -168,19 +168,12 @@ def profe_datos(request, pk):
     profe_Obj = None
     for i in profesores:
         if i['id'] == pk:
-
             profe_Obj = i
     return render(request, 'profe_datos.html', {'index_profe':profe_Obj})
 
 
-def index_profe(request):
+def alumn_profe(request):
     return render(request, 'index_profe.html', {'index_profe':profesores})
-
-            alumn_profe_Obj = i
+    alumn_profe_Obj = i
     return render(request, {'profes':alumn_profe_Obj})
-
-
-# Create your views here.
-def index (request):
-    return HttpResponse("Hello")
 
