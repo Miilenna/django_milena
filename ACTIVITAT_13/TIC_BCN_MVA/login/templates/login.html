@@ -5,6 +5,14 @@
     {% if error %}
         <p style="color: red;">{{ error }}</p>
     {% endif %}
+
+    <form method="POST" action="{% url 'login_amb_sessio' %}">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="contrasenya" placeholder="Contraseña" required>
+        <button type="submit" class="btn-session">Iniciar con Sesión</button>
+    </form>
+
     <form method="POST" action="{% url 'login_sense_sessio' %}">
         {% csrf_token %}
         <button type="submit" class="btn-no-session">Iniciar sin Sesión</button>
