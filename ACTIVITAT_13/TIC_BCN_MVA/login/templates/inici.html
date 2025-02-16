@@ -1,7 +1,12 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Pàgina d’Inici</title>
+</head>
 <body>
-    {% include "head/header.html" %}
-    <h1>Página inicial</h1>
+    <h1>Benvingut, {{ usuario }}!</h1>
 
-    <h1>Benvingut {{usuario}}!</h1>
-    <a href="{% url 'logout' %}" class="top-menu">Logout</a>
+    <a href="{% url 'logout' %}">Tancar sessió</a>
 </body>
+</html>
